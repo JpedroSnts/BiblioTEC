@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="categoria.aspx.cs" Inherits="prjBibliotec.API.categoria" %>

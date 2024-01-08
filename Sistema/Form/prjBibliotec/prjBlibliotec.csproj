@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C84898F-1120-4875-B89D-5A1DBE133B1B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>prjListaLivros</RootNamespace>
+    <AssemblyName>prjListaLivros</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.6.7.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmIdentificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIdentificarCliente.Designer.cs">
+      <DependentUpon>frmIdentificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarLivros.Designer.cs">
+      <DependentUpon>frmListarLivros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMochila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMochila.Designer.cs">
+      <DependentUpon>frmMochila.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfirmarDevolucao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirmarDevolucao.Designer.cs">
+      <DependentUpon>frmConfirmarDevolucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logica\Banco.cs" />
+    <Compile Include="logica\OcorrenciaLogica.cs" />
+    <Compile Include="logica\TipoOcorrenciaLogica.cs" />
+    <Compile Include="logica\EmprestimoLogica.cs" />
+    <Compile Include="logica\ExemplarLogica.cs" />
+    <Compile Include="logica\LivroLogica.cs" />
+    <Compile Include="logica\UsuarioLogica.cs" />
+    <Compile Include="modelo\Autor.cs" />
+    <Compile Include="modelo\Computador.cs" />
+    <Compile Include="modelo\Dados.cs" />
+    <Compile Include="modelo\Emprestimo.cs" />
+    <Compile Include="modelo\Mochila.cs" />
+    <Compile Include="modelo\Ocorrencia.cs" />
+    <Compile Include="modelo\TipoEmprestimo.cs" />
+    <Compile Include="modelo\TipoUsuario.cs" />
+    <Compile Include="modelo\TipoOcorrencia.cs" />
+    <Compile Include="modelo\Categoria.cs" />
+    <Compile Include="modelo\Editora.cs" />
+    <Compile Include="modelo\Exemplar.cs" />
+    <Compile Include="modelo\Livro.cs" />
+    <Compile Include="modelo\Localizacao.cs" />
+    <Compile Include="modelo\Usuario.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConfirmarDevolucao.resx">
+      <DependentUpon>frmConfirmarDevolucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIdentificarCliente.resx">
+      <DependentUpon>frmIdentificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarLivros.resx">
+      <DependentUpon>frmListarLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMochila.resx">
+      <DependentUpon>frmMochila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario_bloqueado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mochila.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-correto.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
